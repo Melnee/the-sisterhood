@@ -10,7 +10,7 @@ const Directory = props => {
                 <div
                     className = "item"
                     style = {{
-                        backgroundImage: 'url(' + { Events } + ")"
+                        backgroundImage: 'url(' + Events + ')'
                     }}
                 >
                     <a>
@@ -20,7 +20,7 @@ const Directory = props => {
                 <div
                     className = "item"
                     style = {{
-                        backgroundImage: 'url(' + { Join } + ")"
+                        backgroundImage: 'url(' + Join + ')'
                     }}
                 >
                     <a>
