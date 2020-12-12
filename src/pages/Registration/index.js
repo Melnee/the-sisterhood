@@ -8,7 +8,7 @@ class Registration extends Component {
         return(
             <div>
                 <h1>
-                    Registration Page will be here
+                    Registration Page
                 </h1>
             </div>
         );

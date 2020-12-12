@@ -21,7 +21,6 @@
             display: block;
             width: 100%;
             margin: 0;
-            border: 2px solid #f98bb6;
         }
 
         .callToActions{
@@ -38,21 +37,27 @@
         }
 
         li{
+            display: inline-block;
             list-style-type: none;
 
             a {
                 font-size: 1.8rem;
                 line-height: 1;
-                color: black;
                 text-decoration: none;
                 text-transform: uppercase;
                 background-color: #2e2b2c;
                 color: #e28eb0;
                 padding: 1rem;
-                border: 2px solid #e28eb0;
+                margin-right: 1.5rem;
             }
 
+            .loginLink{
+                margin-right: 0;
+            }
+            
+
         }
+
     }
 }
 
