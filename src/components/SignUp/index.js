@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './styles.scss';
 
+//firebase
+import { auth, handleUserProfile } from "./../../firebase/utils";
+
+
+//form components
 import FormInput from './../forms/FormInput';
 import Button from "./../forms/Button";
 
@@ -8,7 +13,8 @@ const initialState = {
     displayName: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    errors: []
 
 };
 
@@ -29,8 +35,21 @@ class SignUp extends Component {
         });
     }
 
+    handleFormSubmit = async event => {
+        event.preventDefault();
+        const { displayName, email, password, confirmPassword, errors} = this.state; 
+
+        if(password !== confirmPassword){
+            const err = ['Passwords do not match'];
+            this.setState({
+                errors: err
+            });
+            return;
+        }
+    }
+
     render() {
-        const { displayName, email, password, confirmPassword } = this.state;
+        const { displayName, email, password, confirmPassword, errors } = this.state;
 
         return(
             <div className = "signup">
@@ -38,8 +57,22 @@ class SignUp extends Component {
                     <h2>
                         SignUp
                     </h2>
+                    <div className = "errorWrap">
+                        {errors.length > 0 &&(
+                            <ul>
+                                {errors.map((err, index) => {
+                                    return (
+                                        <li key = {index}>
+                                            {err}
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        )}
+                    </div>
+                    
                     <div className = "formWrap">
-                        <form>
+                        <form onSubmit = { this.handleFormSubmit }>
                             <FormInput 
                                 type = "text"
                                 name = "displayName"
