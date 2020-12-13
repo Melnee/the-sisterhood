@@ -17,12 +17,16 @@
             display: block;
             width: 100;
             padding: 0;
-            margin: 0 auto;
+            margin: 0 auto 3rem;
             color: #f98bb6;
         }
 
         .socialSignin{
-            margin: 3rem auto 0;
+            margin: .5rem auto 0;
+        }
+
+        .errorWrap{
+            color: red;
         }
     }
 }
