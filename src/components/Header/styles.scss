@@ -40,7 +40,7 @@
             display: inline-block;
             list-style-type: none;
 
-            a {
+            a, .logout{
                 font-size: 1.8rem;
                 line-height: 1;
                 text-decoration: none;
@@ -49,13 +49,14 @@
                 color: #e28eb0;
                 padding: 1rem;
                 margin-right: 1.5rem;
+                cursor: pointer;
             }
 
             .loginLink{
                 margin-right: 0;
+                
             }
             
-
         }
 
     }
