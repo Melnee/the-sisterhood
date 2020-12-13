@@ -19,6 +19,7 @@ class SignIn extends Component {
                     <h2>
                         Login
                     </h2> 
+                    
                     <div classnmae = "formWrap">
                         <form onSubmit = { this.handleSubmit }>
                             <div className = "socialSignin">
